@@ -1,1 +1,1 @@
-# Otshubo-MNK
+# Otsubo-MNK
