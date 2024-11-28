@@ -61,6 +61,8 @@ export default function SignForm() {
     } else {
       setErrorMessages({ name: "username", message: errors.username })
     }
+
+    navigate('/dashboard')
   }
 
   return (
@@ -69,7 +71,7 @@ export default function SignForm() {
         <form onSubmit={handleSubmit} className='flex-col gap-4 w-full max-w-xs'>
           <div className='mb-5'>
             <input
-              className='rounded-lg'
+              className='rounded-lg px-2 border-solid border-2 placeholder-marian-blue-500  border-marian-blue-500'
               type="text"
               id="username"
               name="username"
@@ -80,7 +82,7 @@ export default function SignForm() {
           </div>
           <div className='mb-5'>
             <input
-              className='rounded-lg'
+              className='rounded-lg px-2 border-solid border-2 placeholder-marian-blue-500  border-marian-blue-500 '
               type="password"
               id="password"
               name="password"
@@ -95,7 +97,6 @@ export default function SignForm() {
           {errorMessages.name && <p className='text-red-600 font-bold py-4 text-center'>{errorMessages.message}</p>}
           {isSubmitted && <p>Login successful!</p>}
         </form>
-        {isSubmitted ? navigate('/dashboard') : undefined}
         <div className='flex flex-1 items-center justify-center md:items-stretch md:justify-start mb-3'>
           <NavLink to={'/register'}>
             <Button type={"button"} target="register" />
