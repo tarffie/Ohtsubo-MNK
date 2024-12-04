@@ -6,7 +6,7 @@ import UserButton from '../components/UserButton'
 
 export default function Header() {
   return (
-    <nav className='bg-powder-blue-500 border-b border-cyan-600 mb-3'>
+    <nav className='bg-powder-blue-600 border-b border-powder-blue-400 mb-4'>
       <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
         <div className='flex h-20 justify-between'>
 

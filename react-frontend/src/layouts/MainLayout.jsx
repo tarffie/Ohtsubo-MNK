@@ -6,6 +6,7 @@ export default function MainLayout() {
   return (
     <>
       <Outlet />
+      <Footer />
     </>
   )
 }

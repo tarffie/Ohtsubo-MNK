@@ -92,7 +92,7 @@ export default function SignForm() {
             />
           </div>
           <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start mb-3">
-            <Button type={"submit"} target="login" />
+            <Button type="submit" target="login" />
           </div>
           {errorMessages.name && <p className='text-red-600 font-bold py-4 text-center'>{errorMessages.message}</p>}
           {isSubmitted && <p>Login successful!</p>}
