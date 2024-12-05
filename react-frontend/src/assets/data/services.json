@@ -2,51 +2,51 @@
   {
     "service": "missão de vida",
     "permissions": "default",
-    "category": "reencarnation"
+    "id": 1
   },
   {
     "service": "regência vida anterior",
     "permissions": "default",
-    "category": "reencarnation"
+    "id": 2
   },
   {
     "service": "ano pessoal",
     "permissions": "default",
-    "category": "yearly"
+    "id": 3
   },
   {
     "service": "arcano anual",
     "permissions": "default",
-    "category": "yearly"
+    "id": 4
   },
   {
     "service": "peronalidade interna",
     "permissions": "default",
-    "category": "reencarnation"
+    "id": 5
   },
   {
     "service": "peronalidade externa",
     "permissions": "default",
-    "category": "reencarnation"
+    "id": 6
   },
   {
     "service": "peronalidade geral",
     "permissions": "default",
-    "category": "reencarnation"
+    "id": 7
   },
   {
     "service": "oculto",
     "permissions": "default",
-    "category": "reencarnation"
+    "id": 8 
   },
   {
     "service": "desafio",
     "permissions": "default",
-    "category": "reencarnation"
+    "id": 9
   },
   {
     "service": "força do desafio",
     "permissions": "default",
-    "category": "reencarnation"
+    "id": 10
   }
 ]
