@@ -6,11 +6,10 @@ const ARCANOS = 22
 /** 
   * function that reduce your birth date and returns a number lesser or equal to 22
   * @param  {String} date date as string
-  * @return {Number}
+  * @return {number}
   */
 
-
-export default function missaoDeVida(date) {
+function missaoDeVida(date) {
   const sumOfDigits = (number) => splitIntoDigits(number).reduce((acc, cur) => acc + cur, 0)
 
   // Validate date format (dd/MM/yyyy)
@@ -25,3 +24,5 @@ export default function missaoDeVida(date) {
 
   return mdv
 }
+
+export default missaoDeVida

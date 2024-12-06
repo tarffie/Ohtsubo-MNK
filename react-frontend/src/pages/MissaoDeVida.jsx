@@ -1,4 +1,5 @@
 import missaoDeVida from '../utils/functions/missaoDeVida'
+import ResultDisplay from '../components/ResultDisplay'
 
 import { useState } from 'react'
 
@@ -11,6 +12,14 @@ export default function MissaoDeVida() {
 
   const [errorMessages, setErrorMessages] = useState({})
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [result, setResult] = useState({})
+  const [showResult, setShowResult] = useState(false)
+
+  let laterContent;
+
+  if (showResult) {
+    laterContent = <ResultDisplay data={result} />
+  }
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -26,8 +35,8 @@ export default function MissaoDeVida() {
     invalidFormat: "make sure your input is existent."
   }
 
-  const handleSubmit = (event) => {
 
+  const handleSubmit = (event) => {
     // to prevent page reload at submit
     event.preventDefault()
 
@@ -36,32 +45,31 @@ export default function MissaoDeVida() {
     if (birthDate) {
 
       if (!birthDate.match(regex)) {
-
         setErrorMessages({ name: "birthDate", message: errors.birthDate })
-
       } else {
+        setResult(() => missaoDeVida(birthDate))
 
         setIsSubmitted(true)
 
+        if (result !== undefined) {
+          setShowResult(true)
+        }
       }
 
     } else {
-
       setErrorMessages({ name: "invalidField", message: errors.invalidFormat })
-
     }
-
-    missaoDeVida(birthDate)
   }
 
   return (
     <>
-      {errorMessages.name && <p className='text-red-600 font-bold py-4 text-center'>{errorMessages.message}</p>}
-      <form className='flex' onSubmit={handleSubmit}>
+      <form className='flex' onSubmit={handleSubmit} >
         <input type='text' id="birthDate" name="birthDate" value={formData.birthDate} onChange={handleChange} className='flex flex-1 mr-2' placeholder='dd/MM/YYYY' />
         <button type='submit' className='border-2 border-solid border-black-300'> Calculate! </button>
-      </form>
-      {isSubmitted && <p>calculation done!</p>}
+      </form >
+
+      {isSubmitted && <ResultDisplay>{result}</ResultDisplay>}
+      {errorMessages.name && <p className='text-red-600 font-bold py-4 text-center'>{errorMessages.message}</p>}
     </>
   )
 }
