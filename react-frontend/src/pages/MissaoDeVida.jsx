@@ -13,13 +13,6 @@ export default function MissaoDeVida() {
   const [errorMessages, setErrorMessages] = useState({})
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [result, setResult] = useState({})
-  const [showResult, setShowResult] = useState(false)
-
-  let laterContent;
-
-  if (showResult) {
-    laterContent = <ResultDisplay data={result} />
-  }
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -47,13 +40,8 @@ export default function MissaoDeVida() {
       if (!birthDate.match(regex)) {
         setErrorMessages({ name: "birthDate", message: errors.birthDate })
       } else {
-        setResult(() => missaoDeVida(birthDate))
-
+        setResult(missaoDeVida(birthDate))
         setIsSubmitted(true)
-
-        if (result !== undefined) {
-          setShowResult(true)
-        }
       }
 
     } else {
