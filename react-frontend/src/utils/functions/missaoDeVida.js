@@ -1,7 +1,7 @@
 import createArray from './createArray'
 import splitIntoDigits from './splitIntoDigits'
 
-const ARCANOS = 22
+const ARCANOS = 21
 
 /** 
   * function that reduce your birth date and returns a number lesser or equal to 22

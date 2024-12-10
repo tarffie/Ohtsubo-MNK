@@ -1,0 +1,52 @@
+[
+  {
+    "service": "missão de vida",
+    "permissions": "default",
+    "id": 1
+  },
+  {
+    "service": "regência vida anterior",
+    "permissions": "default",
+    "id": 2
+  },
+  {
+    "service": "ano pessoal",
+    "permissions": "default",
+    "id": 3
+  },
+  {
+    "service": "arcano anual",
+    "permissions": "default",
+    "id": 4
+  },
+  {
+    "service": "peronalidade interna",
+    "permissions": "default",
+    "id": 5
+  },
+  {
+    "service": "peronalidade externa",
+    "permissions": "default",
+    "id": 6
+  },
+  {
+    "service": "peronalidade geral",
+    "permissions": "default",
+    "id": 7
+  },
+  {
+    "service": "oculto",
+    "permissions": "default",
+    "id": 8 
+  },
+  {
+    "service": "desafio",
+    "permissions": "default",
+    "id": 9
+  },
+  {
+    "service": "força do desafio",
+    "permissions": "default",
+    "id": 10
+  }
+]

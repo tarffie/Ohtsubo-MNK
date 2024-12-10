@@ -18,6 +18,8 @@ import CalculatorLayout from './layouts/CalculatorLayout'
 import ServicesPage from './pages/ServicesPage'
 import MissaoDeVida from './pages/MissaoDeVida'
 
+import Results from './pages/Results'
+
 export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -28,6 +30,7 @@ export default function App() {
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/settings' element={<SettingsPage />} />
           <Route path='*' element={<NotFoundPage />} />
+          <Route path='/sandbox' element={<Results />} />
         </Route>
         <Route path='/service' element={<CalculatorLayout />}>
           <Route index element={<ServicesPage />} />
