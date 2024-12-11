@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 
 import Button from './Button'
+import { formErrors } from '../utils/errors/formErrors'
 
 // User Login info
 const database = [
@@ -28,11 +29,6 @@ export default function SignForm() {
     password: '',
   })
 
-  const errors = {
-    username: "invalid username",
-    password: "invalid password"
-  }
-
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData({
@@ -53,13 +49,13 @@ export default function SignForm() {
     if (userData) {
 
       if (userData.password !== password) {
-        setErrorMessages({ name: "password", message: errors.password })
+        setErrorMessages({ name: "password", message: formErrors.password })
       } else {
         setIsSubmitted((prevState) => setIsSubmitted(!prevState))
       }
 
     } else {
-      setErrorMessages({ name: "username", message: errors.username })
+      setErrorMessages({ name: "username", message: formErrors.username })
     }
 
     navigate('/dashboard')

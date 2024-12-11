@@ -1,4 +1,4 @@
-import SignForm from './SignForm'
+import SignForm from '../components/SignForm'
 
 import logo from '../assets/images/dark_logo.svg'
 

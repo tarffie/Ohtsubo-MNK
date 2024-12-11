@@ -4,7 +4,7 @@ import CardsRow from '../components/CardsRow'
 
 import { useState } from 'react'
 
-export default function Dashboard() {
+export default function DashboardPage() {
   const [isCalculating, setIsCalculating] = useState(false)
   const [calculate, setCalculate] = useState({})
 
